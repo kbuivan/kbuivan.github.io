@@ -1,0 +1,12 @@
+{% if page.ref %}
+  {% assign versions = site.posts | where: "ref", page.ref %}
+  {% for p in versions %}
+    {% if p.lang != page.lang %}
+      <p class="lang-switch">
+        <a href="{{ p.url | relative_url }}" hreflang="{{ p.lang }}">
+          {% if p.lang == "fr" %}Lire en français{% else %}Read in English{% endif %}
+        </a>
+      </p>
+    {% endif %}
+  {% endfor %}
+{% endif %}
