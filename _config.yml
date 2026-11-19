@@ -1,0 +1,29 @@
+title: Kimty Bui-Van
+description: >-
+  Regulatory Affairs executive. Thinking out loud about agentic AI,
+  human value, digital exhaustion and organizational learning.
+theme: minima
+lang: en
+
+header_pages:
+  - index.md
+  - fr/index.md
+
+minima:
+  date_format: "%Y-%m-%d"
+
+defaults:
+  - scope:
+      path: "en"
+      type: "posts"
+    values:
+      lang: en
+      layout: bilingual
+      permalink: /en/:title/
+  - scope:
+      path: "fr"
+      type: "posts"
+    values:
+      lang: fr
+      layout: bilingual
+      permalink: /fr/:title/
