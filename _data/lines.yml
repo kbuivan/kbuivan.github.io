@@ -19,12 +19,14 @@
 - key: digital-exhaustion
   en:
     name: "Digital Exhaustion"
+    url: /digital-exhaustion/
     description: >-
       What digital life costs us, often without our noticing: attention,
       time, critical thinking.
     note: "Texts available in French only."
   fr:
     name: "Digital Exhaustion"
+    url: /fr/digital-exhaustion/
     description: >-
       Ce que la vie numérique nous coûte, souvent sans que nous le
       voyions : l'attention, le temps, l'esprit critique.
@@ -50,4 +52,3 @@
     description: >-
       Les langues et les cultures, et ce qu'elles révèlent de notre
       façon de voir le monde.
-
