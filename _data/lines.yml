@@ -22,23 +22,21 @@
     description: >-
       What digital life costs us, often without our noticing: attention,
       time, critical thinking.
-    note: "Texts in French, coming soon to this site."
+    note: "Texts available in French only."
   fr:
     name: "Digital Exhaustion"
     description: >-
       Ce que la vie numérique nous coûte, souvent sans que nous le
       voyions : l'attention, le temps, l'esprit critique.
-    note: "Bientôt sur le blog."
 
 - key: reflexions
   en:
     name: "Reflections"
     description: "Here, I share my own conclusions. Yours are still yours to draw."
-    note: "Texts in French, coming soon to this site."
+    note: "Texts available in French only."
   fr:
     name: "Réflexions"
     description: "Ici, je partage mes conclusions. Les vôtres restent libres."
-    note: "Bientôt sur le blog."
 
 - key: decouverte
   en:
@@ -46,10 +44,10 @@
     description: >-
       Languages and cultures, and what they reveal about the way we see
       the world.
-    note: "Texts in French, coming soon to this site."
+    note: "Texts available in French only."
   fr:
     name: "Découverte"
     description: >-
       Les langues et les cultures, et ce qu'elles révèlent de notre
       façon de voir le monde.
-    note: "Bientôt sur le blog."
+
