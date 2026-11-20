@@ -9,6 +9,9 @@ permalink: /
 {% for s in seasons %}
   {% assign info = site.data.seasons[s.name].en %}
   {% if info %}
+  {% if site.data.seasons[s.name].banner %}
+  <p><img src="{{ site.data.seasons[s.name].banner | relative_url }}" alt="{{ info.banner_alt | escape }}" style="max-width:100%;height:auto;"></p>
+  {% endif %}
   <h2>{{ info.title }}</h2>
   <p>{{ info.description }}</p>
   {% endif %}
