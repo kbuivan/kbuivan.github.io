@@ -16,3 +16,24 @@ s1:
       la gouvernance, les équipes, les managers de proximité, la
       formation, et la mesure de ce qui change vraiment. La saison se
       clôt sur un panorama des autorités réglementaires face à l'IA.
+
+s2:
+  banner: /assets/img/banner-s2.JPG
+  en:
+    title: "Season 2 — Working with it"
+    status: "Season currently being published."
+    banner_alt: "Season 2 banner: “Agentic AI: Working with it”, two silhouettes facing a network sphere. Visual generated with AI assistance."
+    description: >-
+      Ten episodes on what working with agentic AI changes day to day:
+      AI biases in a regulated environment, the inflation of signals,
+      deskilling, and what organizations try in response.
+  fr:
+    title: "Saison 2 — Composer avec"
+    status: "Saison en cours de publication."
+    banner_alt: "Bandeau de la saison 2 : « Agentic AI: Working with it », deux silhouettes face à une sphère en réseau. Visuel généré avec l'aide de l'IA."
+    description: >-
+      Dix épisodes sur ce que le travail avec l'IA agentique change au
+      quotidien : les biais de l'IA en environnement réglementé,
+      l'inflation des signaux, le désapprentissage, et ce que les
+      organisations tentent pour y répondre.
+
