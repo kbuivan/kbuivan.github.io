@@ -1,0 +1,30 @@
+{%- if page.lang == "fr" -%}
+  {%- assign home = "/fr/" -%}
+  {%- assign other_lang = "en" -%}
+  {%- assign other_url = "/" -%}
+{%- else -%}
+  {%- assign home = "/" -%}
+  {%- assign other_lang = "fr" -%}
+  {%- assign other_url = "/fr/" -%}
+{%- endif -%}
+{%- if page.ref -%}
+  {%- assign twins = site.pages | where: "ref", page.ref | where: "lang", other_lang -%}
+  {%- if twins.size == 0 -%}
+    {%- assign twins = site.posts | where: "ref", page.ref | where: "lang", other_lang -%}
+  {%- endif -%}
+  {%- if twins.size > 0 -%}
+    {%- assign other_url = twins.first.url -%}
+  {%- endif -%}
+{%- endif -%}
+<header class="site-header" role="banner">
+  <div class="wrapper">
+    <a class="site-title" rel="author" href="{{ home | relative_url }}">{{ site.title | escape }}</a>
+    <nav style="float:right; line-height:54px;" aria-label="Language">
+      {%- if page.lang == "fr" -%}
+        <a href="{{ other_url | relative_url }}" hreflang="en" lang="en">EN</a> | <strong>FR</strong>
+      {%- else -%}
+        <strong>EN</strong> | <a href="{{ other_url | relative_url }}" hreflang="fr" lang="fr">FR</a>
+      {%- endif -%}
+    </nav>
+  </div>
+</header>
