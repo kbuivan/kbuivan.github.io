@@ -1,24 +1,18 @@
 ---
-layout: page
-title: Français
+layout: default
 lang: fr
+ref: home
 permalink: /fr/
 ---
-{% assign posts = site.posts | where: "lang", "fr" | reverse %}
-{% assign seasons = posts | group_by: "season" %}
-{% for s in seasons %}
-  {% assign info = site.data.seasons[s.name].fr %}
-  {% if info %}
-  {% if site.data.seasons[s.name].banner %}
-  <p><img src="{{ site.data.seasons[s.name].banner | relative_url }}" alt="{{ info.banner_alt | escape }}" style="max-width:100%;height:auto;"></p>
-  {% endif %}
-  <h2>{{ info.title }}</h2>
-  <p>{{ info.description }}</p>
-  {% endif %}
-  <ul class="post-list">
-  {% for post in s.items %}
-    <li><span class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</span>
-    <h3><a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3></li>
+<div class="home">
+  <h1 style="font-style:italic;" lang="en">Unlocking hidden pathways</h1>
+  <p>Prendre un sujet par un autre angle, et laisser en chemin quelques-unes de nos idées reçues. La conclusion vous appartient.</p>
+  {% for line in site.data.lines %}
+  {% assign l = line.fr %}
+  <section style="margin-top:2em;">
+    <h2>{% if l.url %}<a href="{{ l.url | relative_url }}">{{ l.name }}</a>{% else %}{{ l.name }}{% endif %}</h2>
+    <p>{{ l.description }}</p>
+    {% if l.note %}<p><em>{{ l.note }}</em></p>{% endif %}
+  </section>
   {% endfor %}
-  </ul>
-{% endfor %}
+</div>
