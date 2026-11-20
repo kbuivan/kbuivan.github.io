@@ -1,6 +1,8 @@
 s1:
+  banner: /assets/img/banner-s1.JPG
   en:
     title: "Season 1 — Shaping the Future of Work"
+    banner_alt: "Season 1 banner: “Agentic AI: Shaping the Future of Work”, two silhouettes facing a network sphere. Visual generated with AI assistance."
     description: >-
       Twelve episodes on preparing for agentic AI: data, governance,
       teams, front-line managers, training, and measuring what really
@@ -8,6 +10,7 @@ s1:
       authorities facing AI.
   fr:
     title: "Saison 1 — Façonner le travail de demain"
+    banner_alt: "Bandeau de la saison 1 : « Agentic AI: Shaping the Future of Work », deux silhouettes face à une sphère en réseau. Visuel généré avec l'aide de l'IA."
     description: >-
       Douze épisodes sur la préparation à l'IA agentique : les données,
       la gouvernance, les équipes, les managers de proximité, la
