@@ -34,10 +34,12 @@
 - key: reflexions
   en:
     name: "Reflections"
+    url: /reflections/
     description: "Here, I share my own conclusions. Yours are still yours to draw."
     note: "Texts available in French only."
   fr:
     name: "Réflexions"
+    url: /fr/reflexions/
     description: "Ici, je partage mes conclusions. Les vôtres restent libres."
 
 - key: decouverte
