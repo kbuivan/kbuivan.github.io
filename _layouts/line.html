@@ -1,0 +1,14 @@
+---
+layout: page
+---
+{%- assign line = site.data.lines | where: "key", page.line | first -%}
+{%- if page.lang == "fr" -%}{%- assign l = line.fr -%}{%- else -%}{%- assign l = line.en -%}{%- endif -%}
+<p>{{ l.description }}</p>
+{% if l.note %}<p><em>{{ l.note }}</em></p>{% endif %}
+{%- assign items = site.posts | where: "line", page.line | reverse -%}
+<ul class="post-list">
+{%- for post in items %}
+  <li><span class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</span>
+  <h3><a class="post-link" href="{{ post.url | relative_url }}"{% if post.lang != page.lang %} hreflang="{{ post.lang }}" lang="{{ post.lang }}"{% endif %}>{{ post.title | escape }}</a></h3></li>
+{%- endfor %}
+</ul>
