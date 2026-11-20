@@ -45,12 +45,14 @@
 - key: decouverte
   en:
     name: "Discovery"
+    url: /discovery/
     description: >-
       Languages and cultures, and what they reveal about the way we see
       the world.
     note: "Texts available in French only."
   fr:
     name: "Découverte"
+    url: /fr/decouverte/
     description: >-
       Les langues et les cultures, et ce qu'elles révèlent de notre
       façon de voir le monde.
