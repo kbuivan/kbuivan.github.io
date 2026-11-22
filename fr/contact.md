@@ -19,6 +19,9 @@ permalink: /fr/contact/
   <p><label for="email">Adresse e-mail</label><br>
   <input type="email" id="email" name="email" required style="width:100%; box-sizing:border-box; padding:8px;"></p>
 
+  <p><label for="topic">Sujet ou texte concerné <small>(facultatif)</small></label><br>
+  <input type="text" id="topic" name="topic" style="width:100%; box-sizing:border-box; padding:8px;"></p>
+
   <p><label for="message">Message</label><br>
   <textarea id="message" name="message" rows="8" required style="width:100%; box-sizing:border-box; padding:8px;"></textarea></p>
 
@@ -26,3 +29,4 @@ permalink: /fr/contact/
 </form>
 
 <p><small>Votre message est transmis par le service Web3Forms et sert uniquement à vous répondre.</small></p>
+
