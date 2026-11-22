@@ -2,10 +2,16 @@
   {%- assign home = "/fr/" -%}
   {%- assign other_lang = "en" -%}
   {%- assign other_url = "/" -%}
+  {%- assign about_url = "/fr/a-propos/" -%}
+  {%- assign about_label = "À propos" -%}
+  {%- assign contact_url = "/fr/contact/" -%}
 {%- else -%}
   {%- assign home = "/" -%}
   {%- assign other_lang = "fr" -%}
   {%- assign other_url = "/fr/" -%}
+  {%- assign about_url = "/about/" -%}
+  {%- assign about_label = "About" -%}
+  {%- assign contact_url = "/contact/" -%}
 {%- endif -%}
 {%- if page.ref -%}
   {%- assign twins = site.pages | where: "ref", page.ref | where: "lang", other_lang -%}
@@ -19,12 +25,17 @@
 <header class="site-header" role="banner">
   <div class="wrapper">
     <a class="site-title" rel="author" href="{{ home | relative_url }}">{{ site.title | escape }}</a>
-    <nav style="float:right; line-height:54px;" aria-label="Language">
-      {%- if page.lang == "fr" -%}
+    <nav style="float:right; line-height:54px;" aria-label="Navigation">
+      <a href="{{ about_url | relative_url }}">{{ about_label }}</a>
+      &nbsp;·&nbsp;
+      <a href="{{ contact_url | relative_url }}">Contact</a>
+      &nbsp;&nbsp;&nbsp;
+      {%- if page.lang == "fr" %}
         <a href="{{ other_url | relative_url }}" hreflang="en" lang="en">EN</a> | <strong>FR</strong>
-      {%- else -%}
+      {%- else %}
         <strong>EN</strong> | <a href="{{ other_url | relative_url }}" hreflang="fr" lang="fr">FR</a>
-      {%- endif -%}
+      {%- endif %}
     </nav>
   </div>
 </header>
+
