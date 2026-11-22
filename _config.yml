@@ -7,6 +7,11 @@ url: "https://kbuivan.com"
 theme: minima
 lang: en
 
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
 header_pages:
   - index.md
   - fr/index.md
@@ -29,3 +34,4 @@ defaults:
       lang: fr
       layout: bilingual
       permalink: /fr/:title/
+
