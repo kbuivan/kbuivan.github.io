@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Agentic AI
+title: IA agentique
 lang: fr
 ref: agentic-ai
 permalink: /fr/agentic-ai/

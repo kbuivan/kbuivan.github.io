@@ -1,6 +1,6 @@
 ---
 layout: line
-title: Digital Exhaustion
+title: Épuisement numérique
 lang: fr
 ref: digital-exhaustion
 line: digital-exhaustion
