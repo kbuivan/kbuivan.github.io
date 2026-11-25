@@ -17,7 +17,7 @@
   {%- assign t_lines = "Four lines of writing" -%}
   {%- assign t_lines_sub = "Different subjects, one approach: examining what seems obvious." -%}
   {%- assign t_featured = "Start here" -%}
-  {%- assign t_featured_sub = "Three texts that show how I approach a subject. Available in French only." -%}
+  {%- assign t_featured_sub = "Three texts that show how I approach a subject." -%}
   {%- assign t_latest = "Latest" -%}
   {%- assign t_read = "Read →" -%}
   {%- assign t_min = "min read" -%}
@@ -61,13 +61,23 @@
       {%- for item in site.data.featured %}
       {%- assign post = site.posts | where: "url", item.url | first %}
       {%- if post %}
+      {%- comment -%} Version dans la langue de la page si elle existe, sinon le texte d'origine {%- endcomment -%}
+      {%- if post.lang != lang and post.ref %}
+        {%- assign twin = site.posts | where: "ref", post.ref | where: "lang", lang | first %}
+        {%- if twin %}{% assign post = twin %}{% endif %}
+      {%- endif %}
+      {%- if post.lang == "en" and item.quote_en %}
+        {%- assign q = item.quote_en %}{% assign q_open = "“" %}{% assign q_close = "”" %}
+      {%- else %}
+        {%- assign q = item.quote %}{% assign q_open = "« " %}{% assign q_close = " »" %}
+      {%- endif %}
       {%- assign ld = site.data.lines | where: "key", item.line | first %}
       {%- assign words = post.content | strip_html | number_of_words %}
       {%- assign mins = words | plus: 199 | divided_by: 200 %}
-      <a class="kb-feature" href="{{ post.url | relative_url }}" hreflang="fr" lang="fr">
+      <a class="kb-feature" href="{{ post.url | relative_url }}"{% if post.lang != lang %} hreflang="{{ post.lang }}" lang="{{ post.lang }}"{% endif %}>
         <span class="kb-tag kb-tag-{{ item.line }}" lang="{{ lang }}">{{ ld[lang].name }}</span>
         <h3>{{ post.title }}</h3>
-        <p class="kb-quote">« {{ item.quote }} »</p>
+        <p class="kb-quote">{{ q_open }}{{ q }}{{ q_close }}</p>
         <span class="kb-feature-foot" lang="{{ lang }}"><span>{{ mins }} {{ t_min }}</span><span class="kb-more">{{ t_read }}</span></span>
       </a>
       {%- endif %}
