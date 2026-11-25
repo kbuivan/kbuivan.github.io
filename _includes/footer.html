@@ -1,10 +1,15 @@
-<footer class="site-footer">
-  <div class="wrapper">
-    {% if page.lang == "fr" %}
-      <p>Executive en affaires réglementaires. Réflexions sur l'IA agentique, la valeur humaine, l'épuisement numérique, et la manière dont les organisations apprennent et évoluent.</p>
-    {% else %}
-      <p>{{ site.description | escape }}</p>
-    {% endif %}
+{%- if page.lang == "fr" -%}
+  {%- assign f_about = "/fr/a-propos/" -%}{%- assign f_about_label = "À propos" -%}{%- assign f_contact = "/fr/contact/" -%}
+{%- else -%}
+  {%- assign f_about = "/about/" -%}{%- assign f_about_label = "About" -%}{%- assign f_contact = "/contact/" -%}
+{%- endif -%}
+<footer class="site-footer kb-footer">
+  <div class="wrapper kb-footer-inner">
+    <span><strong>{{ site.title | escape }}</strong> · <span lang="en">{{ site.tagline }}</span></span>
+    <span class="kb-footer-links">
+      <a href="{{ f_about | relative_url }}">{{ f_about_label }}</a>
+      <a href="{{ f_contact | relative_url }}">Contact</a>
+    </span>
   </div>
 </footer>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "a9c0c47b205e45f9a7f8c04e635aed13"}'></script><!-- End Cloudflare Web Analytics -->

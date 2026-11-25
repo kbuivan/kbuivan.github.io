@@ -1,0 +1,19 @@
+{%- case include.key -%}
+{%- when "agentic-ai" -%}
+<div class="kb-visual" style="background:#1F5CA1">
+<svg aria-hidden="true" viewBox="0 0 400 170" preserveAspectRatio="xMidYMid slice"><g stroke="#8FB3E0" stroke-width="1" opacity="0.8"><line x1="60" y1="40" x2="150" y2="95"/><line x1="150" y1="95" x2="250" y2="55"/><line x1="250" y1="55" x2="330" y2="120"/><line x1="150" y1="95" x2="210" y2="145"/><line x1="210" y1="145" x2="330" y2="120"/><line x1="250" y1="55" x2="210" y2="145"/></g><g fill="#FFFFFF"><circle cx="60" cy="40" r="5"/><circle cx="150" cy="95" r="7"/><circle cx="330" cy="120" r="5"/><circle cx="210" cy="145" r="4"/></g><circle cx="250" cy="55" r="9" fill="#E07A5F"/></svg>
+{%- if include.badge %}<span class="kb-badge">{{ include.badge }}</span>{% endif -%}
+</div>
+{%- when "digital-exhaustion" -%}
+<div class="kb-visual" style="background:#E07A5F">
+<svg aria-hidden="true" viewBox="0 0 400 170" preserveAspectRatio="xMidYMid slice"><g fill="none" stroke="#FFFFFF" stroke-width="1.4"><circle cx="300" cy="85" r="20" opacity="0.95"/><circle cx="300" cy="85" r="42" opacity="0.7"/><circle cx="300" cy="85" r="66" opacity="0.5"/><circle cx="300" cy="85" r="92" opacity="0.32"/><circle cx="300" cy="85" r="120" opacity="0.18"/></g><circle cx="300" cy="85" r="7" fill="#16325C"/></svg>
+</div>
+{%- when "reflexions" -%}
+<div class="kb-visual" style="background:#EAF0F8">
+<svg aria-hidden="true" viewBox="0 0 400 170" preserveAspectRatio="xMidYMid slice"><g fill="none" stroke-width="2.2" stroke-linecap="round"><path d="M40 140 C 120 140, 150 85, 200 85" stroke="#1F5CA1"/><path d="M200 85 C 250 85, 280 30, 360 30" stroke="#1F5CA1"/><path d="M200 85 C 260 85, 300 85, 360 85" stroke="#9FB4CE"/><path d="M200 85 C 250 85, 280 140, 360 140" stroke="#E07A5F"/></g><circle cx="200" cy="85" r="7" fill="#16325C"/><circle cx="360" cy="140" r="6" fill="#E07A5F"/></svg>
+</div>
+{%- else -%}
+<div class="kb-visual" style="background:#16325C">
+<svg aria-hidden="true" viewBox="0 0 400 170" preserveAspectRatio="xMidYMid slice"><g fill="none" stroke-width="1.6"><circle cx="170" cy="85" r="52" stroke="#8FB3E0"/><circle cx="230" cy="85" r="52" stroke="#E07A5F"/><ellipse cx="200" cy="85" rx="120" ry="40" stroke="#3F78C0" opacity="0.7"/></g><circle cx="200" cy="85" r="6" fill="#FFFFFF"/></svg>
+</div>
+{%- endcase -%}

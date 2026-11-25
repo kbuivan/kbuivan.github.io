@@ -1,0 +1,97 @@
+{%- assign lang = include.lang -%}
+{%- if lang == "fr" -%}
+  {%- assign t_intro = "Prendre un sujet par un autre angle, et laisser en chemin quelques-unes de nos idées reçues. La conclusion vous appartient." -%}
+  {%- assign t_cta1 = "Commencer par l’IA agentique" -%}{%- assign u_cta1 = "/fr/agentic-ai/" -%}
+  {%- assign t_cta2 = "À propos de ma démarche" -%}{%- assign u_cta2 = "/fr/a-propos/" -%}
+  {%- assign t_lines = "Quatre lignes d’écriture" -%}
+  {%- assign t_lines_sub = "Des sujets différents, une même démarche : examiner ce qui paraît évident." -%}
+  {%- assign t_featured = "À lire en premier" -%}
+  {%- assign t_featured_sub = "Trois textes pour découvrir ma façon d’aborder un sujet." -%}
+  {%- assign t_latest = "Derniers textes" -%}
+  {%- assign t_read = "Lire →" -%}
+  {%- assign t_min = "min de lecture" -%}
+{%- else -%}
+  {%- assign t_intro = "Taking a subject from another angle, and leaving a few of our assumptions behind along the way. The conclusion is yours." -%}
+  {%- assign t_cta1 = "Start with Agentic AI" -%}{%- assign u_cta1 = "/agentic-ai/" -%}
+  {%- assign t_cta2 = "About my approach" -%}{%- assign u_cta2 = "/about/" -%}
+  {%- assign t_lines = "Four lines of writing" -%}
+  {%- assign t_lines_sub = "Different subjects, one approach: examining what seems obvious." -%}
+  {%- assign t_featured = "Start here" -%}
+  {%- assign t_featured_sub = "Three texts that show how I approach a subject. Available in French only." -%}
+  {%- assign t_latest = "Latest" -%}
+  {%- assign t_read = "Read →" -%}
+  {%- assign t_min = "min read" -%}
+{%- endif -%}
+{%- assign mois = "janv.,févr.,mars,avr.,mai,juin,juil.,août,sept.,oct.,nov.,déc." | split: "," -%}
+
+<section class="kb-hero">
+  <svg class="kb-hero-art" aria-hidden="true" viewBox="0 0 600 360"><g fill="none" stroke="#3F78C0" stroke-width="1.2"><path d="M40 300 C 180 260, 220 120, 360 140 S 520 60, 600 40"/><path d="M80 340 C 220 300, 300 200, 420 220 S 560 160, 620 150"/><path d="M0 230 C 140 210, 200 70, 320 60 S 480 20, 560 0" stroke="#E07A5F" stroke-width="1.6"/></g><g fill="#3F78C0"><circle cx="360" cy="140" r="4"/><circle cx="420" cy="220" r="4"/><circle cx="180" cy="270" r="3"/></g><circle cx="320" cy="60" r="5" fill="#E07A5F"/></svg>
+  <div class="wrapper kb-hero-inner">
+    <h1 class="kb-tagline" lang="en">{{ site.tagline }}</h1>
+    <p class="kb-intro">{{ t_intro }}</p>
+    <div class="kb-ctas">
+      <a class="kb-btn kb-btn-primary" href="{{ u_cta1 | relative_url }}">{{ t_cta1 }}</a>
+      <a class="kb-btn kb-btn-ghost" href="{{ u_cta2 | relative_url }}">{{ t_cta2 }}</a>
+    </div>
+  </div>
+</section>
+
+<div class="wrapper kb-home">
+  <h2 class="kb-h2">{{ t_lines }}</h2>
+  <p class="kb-sub">{{ t_lines_sub }}</p>
+  <div class="kb-cards">
+    {%- for line in site.data.lines %}
+    {%- assign l = line[lang] %}
+    <a class="kb-card" href="{{ l.url | relative_url }}">
+      {% include line-visual.html key=line.key badge=l.badge %}
+      <div class="kb-card-body">
+        <h3>{{ l.name }}</h3>
+        <p>{{ l.description }}</p>
+        {%- if l.note %}<p class="kb-note">{{ l.note }}</p>{% endif %}
+        <span class="kb-more">{{ l.link }}</span>
+      </div>
+    </a>
+    {%- endfor %}
+  </div>
+
+  <section class="kb-featured">
+    <h2 class="kb-h2">{{ t_featured }}</h2>
+    <p class="kb-sub">{{ t_featured_sub }}</p>
+    <div class="kb-featured-grid">
+      {%- for item in site.data.featured %}
+      {%- assign post = site.posts | where: "url", item.url | first %}
+      {%- if post %}
+      {%- assign ld = site.data.lines | where: "key", item.line | first %}
+      {%- assign words = post.content | strip_html | number_of_words %}
+      {%- assign mins = words | plus: 199 | divided_by: 200 %}
+      <a class="kb-feature" href="{{ post.url | relative_url }}" hreflang="fr" lang="fr">
+        <span class="kb-tag kb-tag-{{ item.line }}" lang="{{ lang }}">{{ ld[lang].name }}</span>
+        <h3>{{ post.title }}</h3>
+        <p class="kb-quote">« {{ item.quote }} »</p>
+        <span class="kb-feature-foot" lang="{{ lang }}"><span>{{ mins }} {{ t_min }}</span><span class="kb-more">{{ t_read }}</span></span>
+      </a>
+      {%- endif %}
+      {%- endfor %}
+    </div>
+  </section>
+
+  <section class="kb-latest">
+    <h2 class="kb-h2">{{ t_latest }}</h2>
+    {%- assign latest = site.posts | where: "lang", lang %}
+    {%- for post in latest limit: 3 %}
+    {%- if post.season %}{% assign key = "agentic-ai" %}{% else %}{% assign key = post.line %}{% endif %}
+    {%- assign ld = site.data.lines | where: "key", key | first %}
+    {%- assign words = post.content | strip_html | number_of_words %}
+    {%- assign mins = words | plus: 199 | divided_by: 200 %}
+    {%- assign m = post.date | date: "%-m" | minus: 1 %}
+    <a class="kb-row" href="{{ post.url | relative_url }}">
+      <span class="kb-date">{% if lang == "fr" %}{{ post.date | date: "%-d" }} {{ mois[m] }} {{ post.date | date: "%Y" }}{% else %}{{ post.date | date: "%-d %b %Y" }}{% endif %}</span>
+      <span class="kb-row-main">
+        <span class="kb-row-meta"><span class="kb-tag kb-tag-{{ key }}">{{ ld[lang].name }}</span><span>{{ mins }} {{ t_min }}</span></span>
+        <span class="kb-row-title">{{ post.title | remove: "IA agentique — " | remove: "Agentic AI — " }}</span>
+        <span class="kb-row-teaser">{{ post.excerpt | strip_html | strip_newlines | truncatewords: 24, "…" }}</span>
+      </span>
+    </a>
+    {%- endfor %}
+  </section>
+</div>
