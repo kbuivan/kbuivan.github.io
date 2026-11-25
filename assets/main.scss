@@ -1,0 +1,141 @@
+---
+# Feuille de style du site : thème minima + identité kbuivan.com
+---
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Source+Serif+4:ital,wght@0,400;1,400;1,600&display=swap");
+
+$base-font-family: "Lato", -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+$base-font-size: 17px;
+$text-color: #1E2A38;
+$background-color: #FFFFFF;
+$brand-color: #1F5CA1;
+$grey-color: #5A6878;
+$content-width: 1120px;
+
+@import "minima";
+
+// Palette
+$kb-navy: #16325C;
+$kb-blue: #1F5CA1;
+$kb-coral: #E07A5F;
+$kb-coral-light: #F2A07B;
+$kb-coral-text: #A8451F;
+$kb-slate: #3A4959;
+$kb-line: #DCE4EE;
+$kb-pale: #EAF0F8;
+$kb-mist: #F3F6FA;
+$kb-blush: #FBF1EC;
+
+body { color: $text-color; }
+a { color: $kb-blue; }
+a:hover { color: $kb-navy; }
+h1, h2, h3 { color: $kb-navy; }
+
+// En-tête
+.kb-header { background: $kb-navy; border-top: 0; border-bottom: 0; min-height: 0; }
+.kb-header-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; padding-top: 16px; padding-bottom: 16px; }
+.kb-header .kb-site-title, .kb-header .kb-site-title:visited { float: none; margin: 0; color: #FFFFFF; font-weight: 900; font-size: 22px; letter-spacing: 0.3px; line-height: 1.3; }
+.kb-nav { display: flex; flex-wrap: wrap; align-items: center; gap: 20px; font-size: 16px; }
+.kb-nav a, .kb-nav a:visited { color: #FFFFFF; }
+.kb-nav a:hover { color: $kb-coral-light; text-decoration: none; }
+.kb-lang { display: inline-flex; gap: 6px; align-items: center; padding-left: 14px; border-left: 1px solid rgba(255,255,255,0.35); color: #C9D6E8; }
+.kb-lang a, .kb-lang a:visited { color: #C9D6E8; }
+.kb-lang strong { color: $kb-coral-light; }
+
+// Pied de page
+.kb-footer { background: $kb-mist; border-top: 1px solid $kb-line; margin-top: 64px; padding: 32px 0; }
+.kb-footer-inner { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; font-size: 15px; color: #4A5A6C; }
+.kb-footer strong { color: $kb-navy; }
+.kb-footer-links { display: flex; gap: 20px; }
+
+// Pages de texte : colonne de lecture
+.page-content { padding-top: 48px; }
+.post { max-width: 720px; margin: 0 auto; }
+.post-title, .post-header h1 { font-weight: 900; color: $kb-navy; letter-spacing: 0; }
+.post-content { font-size: 18px; line-height: 1.7; }
+.post-content h2 { font-weight: 900; margin-top: 1.6em; }
+.post-list > li { padding: 16px 0; border-top: 1px solid $kb-line; margin-bottom: 0; }
+.post-link { font-weight: 700; color: $kb-navy; }
+.post-meta { color: #5A6878; }
+.lang-switch a { font-weight: 700; color: $kb-coral-text; }
+
+// Accueil : bandeau
+.kb-landing { display: block; flex: 1; }
+.kb-hero { background: $kb-navy; color: #FFFFFF; position: relative; overflow: hidden; }
+.kb-hero-art { position: absolute; right: -40px; top: 0; width: 600px; height: 360px; opacity: 0.55; }
+.kb-hero-inner { position: relative; padding-top: 72px; padding-bottom: 88px; }
+.kb-tagline { margin: 0; font-family: "Source Serif 4", Georgia, serif; font-style: italic; font-weight: 600; font-size: 64px; line-height: 1.05; max-width: 760px; color: #FFFFFF; letter-spacing: 0; }
+.kb-intro { margin: 24px 0 0; font-size: 21px; line-height: 1.55; max-width: 640px; color: #E3EAF3; }
+.kb-ctas { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 36px; }
+.kb-btn { display: inline-block; font-weight: 700; font-size: 16px; padding: 13px 24px; border-radius: 999px; text-decoration: none; }
+.kb-btn:hover { text-decoration: none; }
+.kb-btn-primary, .kb-btn-primary:visited { background: $kb-coral; color: #1E1410; }
+.kb-btn-primary:hover { background: $kb-coral-light; color: #1E1410; }
+.kb-btn-ghost, .kb-btn-ghost:visited { color: #FFFFFF; border: 1.5px solid rgba(255,255,255,0.5); }
+.kb-btn-ghost:hover { color: #FFFFFF; border-color: #FFFFFF; }
+
+// Accueil : sections
+.kb-home { padding-top: 72px; }
+.kb-h2 { margin: 0 0 8px; font-size: 32px; font-weight: 900; color: $kb-navy; }
+.kb-sub { margin: 0 0 32px; font-size: 18px; color: #4A5A6C; }
+
+// Cartes des lignes
+.kb-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(#{"min(100%, 420px)"}, 1fr)); gap: 28px; }
+.kb-card { display: flex; flex-direction: column; border-radius: 18px; overflow: hidden; background: #FFFFFF; border: 1px solid $kb-line; color: $text-color; text-decoration: none; transition: box-shadow 0.2s, transform 0.2s; }
+.kb-card:hover { text-decoration: none; color: $text-color; box-shadow: 0 10px 28px rgba(22,50,92,0.12); transform: translateY(-2px); }
+.kb-visual { height: 170px; position: relative; }
+.kb-visual svg { display: block; width: 100%; height: 100%; }
+.kb-badge { position: absolute; left: 20px; bottom: 16px; background: #FFFFFF; color: $kb-navy; font-size: 13px; font-weight: 700; padding: 5px 12px; border-radius: 999px; }
+.kb-card-body { padding: 24px 26px 28px; display: flex; flex-direction: column; gap: 10px; }
+.kb-card-body h3 { margin: 0; font-size: 26px; font-weight: 900; color: $kb-navy; }
+.kb-card-body p { margin: 0; font-size: 17px; line-height: 1.55; color: $kb-slate; }
+.kb-card-body .kb-note { font-style: italic; color: #5A6878; font-size: 15px; }
+.kb-more { margin-top: 6px; font-weight: 700; color: $kb-coral-text; }
+
+// À lire en premier
+.kb-featured { margin-top: 80px; background: $kb-blush; border-radius: 24px; padding: 48px 32px; }
+.kb-featured-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(#{"min(100%, 290px)"}, 1fr)); gap: 24px; }
+.kb-feature { display: flex; flex-direction: column; gap: 14px; background: #FFFFFF; border-radius: 18px; padding: 28px; border: 1px solid #EAD9CF; color: $text-color; text-decoration: none; }
+.kb-feature:hover { text-decoration: none; color: $text-color; box-shadow: 0 10px 28px rgba(22,50,92,0.10); }
+.kb-feature h3 { margin: 0; font-size: 24px; font-weight: 900; color: $kb-navy; }
+.kb-quote { margin: 0; font-family: "Source Serif 4", Georgia, serif; font-style: italic; font-size: 18px; line-height: 1.5; color: $kb-slate; flex: 1 1 auto; }
+.kb-feature-foot { display: flex; justify-content: space-between; font-size: 15px; color: #5A6878; }
+.kb-feature-foot .kb-more { margin-top: 0; }
+
+// Étiquettes de ligne
+.kb-tag { align-self: flex-start; display: inline-block; font-size: 13px; font-weight: 700; padding: 3px 10px; border-radius: 999px; line-height: 1.4; }
+.kb-tag-agentic-ai { background: $kb-blue; color: #FFFFFF; }
+.kb-tag-digital-exhaustion { background: $kb-coral-light; color: #1E1410; }
+.kb-tag-reflexions, .kb-tag-decouverte { background: $kb-pale; color: $kb-navy; }
+
+// Derniers textes
+.kb-latest { margin-top: 80px; }
+.kb-row { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 20px; padding: 24px 0; border-top: 1px solid $kb-line; color: $text-color; text-decoration: none; }
+.kb-row:last-child { border-bottom: 1px solid $kb-line; }
+.kb-row:hover { text-decoration: none; color: $text-color; }
+.kb-row:hover .kb-row-title { color: $kb-blue; }
+.kb-date { font-size: 14px; color: #5A6878; min-width: 110px; }
+.kb-row-main { flex: 1 1 420px; display: flex; flex-direction: column; gap: 6px; }
+.kb-row-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; font-size: 14px; color: #5A6878; }
+.kb-row-title { font-size: 20px; font-weight: 700; color: $kb-navy; }
+.kb-row-teaser { font-size: 16px; line-height: 1.5; color: #4A5A6C; }
+
+// Page À propos : portrait
+.kb-portrait { float: right; width: 200px; height: 200px; margin: 0 0 20px 28px; box-sizing: border-box; border-radius: 50%; border: 5px solid $kb-coral; overflow: hidden; background: #EDEEEE; display: flex; justify-content: center; align-items: flex-start; }
+.kb-portrait img { width: 84%; height: auto; margin-top: 12px; }
+
+// Formulaire de contact
+.post-content button[type="submit"] { background: $kb-coral; color: #1E1410; border: 0; border-radius: 999px; font-weight: 700; font-size: 16px; padding: 12px 26px !important; cursor: pointer; font-family: inherit; }
+.post-content button[type="submit"]:hover { background: $kb-coral-light; }
+.post-content input[type="text"], .post-content input[type="email"], .post-content textarea { border: 1px solid #B9C6D6; border-radius: 10px; font-family: inherit; font-size: 16px; }
+
+// Téléphone
+@media screen and (max-width: 600px) {
+  .kb-tagline { font-size: 42px; }
+  .kb-intro { font-size: 18px; }
+  .kb-hero-inner { padding-top: 48px; padding-bottom: 56px; }
+  .kb-hero-art { width: 420px; height: 252px; opacity: 0.35; }
+  .kb-h2 { font-size: 26px; }
+  .kb-featured { padding: 32px 18px; border-radius: 18px; }
+  .kb-portrait { float: none; margin: 0 auto 24px; }
+  .kb-nav { gap: 14px; font-size: 15px; }
+}
