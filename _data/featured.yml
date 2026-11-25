@@ -1,0 +1,14 @@
+# Textes « À lire en premier » sur la page d'accueil, dans cet ordre.
+# url : adresse du texte sur le site. quote : accroche (première phrase du texte).
+
+- url: /fr/silence-et-visibilite/
+  line: digital-exhaustion
+  quote: "J’ai grandi avec l’idée que la parole est d’argent et le silence est d’or, que pour vivre heureux, vivons cachés."
+
+- url: /fr/chef-d-orchestre/
+  line: reflexions
+  quote: "Un chef d’orchestre a-t-il besoin d’être un virtuose de chaque instrument pour mener ses musiciens ? Je ne crois pas."
+
+- url: /fr/la-plume-et-l-intention/
+  line: digital-exhaustion
+  quote: "Avec l’IA, une idée de post se concrétise plus vite, parce qu’on croit qu’elle prendra moins de temps à écrire."

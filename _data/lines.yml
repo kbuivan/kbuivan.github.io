@@ -1,6 +1,6 @@
 # Lignes éditoriales affichées sur la page d'accueil, dans cet ordre.
-# url : page de la ligne. Laisser vide tant que la ligne n'a pas de texte sur le blog.
-# note : mention affichée sous la description (facultatif).
+# url : page de la ligne. note : mention affichée sous la description (facultatif).
+# link : libellé du lien en bas de la carte. badge : étiquette sur le visuel (facultatif).
 
 - key: agentic-ai
   en:
@@ -9,12 +9,16 @@
     description: >-
       A series in seasons on what agentic AI changes in organizations,
       from preparation to day-to-day work.
+    link: "Read the series →"
+    badge: "Series · 2 seasons"
   fr:
-    name: "Agentic AI"
+    name: "IA agentique"
     url: /fr/agentic-ai/
     description: >-
       Une série en saisons sur ce que l'IA agentique change dans les
       organisations, de la préparation au travail au quotidien.
+    link: "Lire la série →"
+    badge: "Série · 2 saisons"
 
 - key: digital-exhaustion
   en:
@@ -24,12 +28,14 @@
       What digital life costs us, often without our noticing: attention,
       time, critical thinking.
     note: "Texts available in French only."
+    link: "Read the texts →"
   fr:
-    name: "Digital Exhaustion"
+    name: "Épuisement numérique"
     url: /fr/digital-exhaustion/
     description: >-
       Ce que la vie numérique nous coûte, souvent sans que nous le
       voyions : l'attention, le temps, l'esprit critique.
+    link: "Lire les textes →"
 
 - key: reflexions
   en:
@@ -37,10 +43,12 @@
     url: /reflections/
     description: "Here, I share my own conclusions. Yours are still yours to draw."
     note: "Texts available in French only."
+    link: "Read the reflections →"
   fr:
     name: "Réflexions"
     url: /fr/reflexions/
     description: "Ici, je partage mes conclusions. Les vôtres restent libres."
+    link: "Lire les réflexions →"
 
 - key: decouverte
   en:
@@ -50,9 +58,11 @@
       Languages and cultures, and what they reveal about the way we see
       the world.
     note: "Texts available in French only."
+    link: "Discover →"
   fr:
     name: "Découverte"
     url: /fr/decouverte/
     description: >-
       Les langues et les cultures, et ce qu'elles révèlent de notre
       façon de voir le monde.
+    link: "Découvrir →"
