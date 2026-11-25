@@ -6,6 +6,8 @@ ref: about
 permalink: /about/
 ---
 
+<div class="kb-portrait"><img src="/assets/img/kimty-bui-van.jpg" alt="Portrait of Kimty Bui-Van"></div>
+
 Welcome.
 
 I created this space to explore subjects that interest me, and to invite you to look at them differently.
