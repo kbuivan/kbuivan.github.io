@@ -134,8 +134,12 @@ h1, h2, h3 { color: $kb-navy; }
   .kb-intro { font-size: 17px; }
   .kb-hero-inner { padding-top: 40px; padding-bottom: 44px; }
   .kb-hero-art { width: 460px; height: 276px; opacity: 0.4; }
-  .kb-featured-grid { grid-template-columns: minmax(0, 1fr); }
-  .kb-quote { flex: 0 0 auto; }
+  .kb-featured { padding: 24px 18px; }
+  .kb-featured-grid { gap: 12px; }
+  .kb-feature { padding: 16px; gap: 8px; }
+  .kb-feature h3 { font-size: 18px; }
+  .kb-quote { font-size: 15px; }
+  .kb-feature-foot { flex-direction: column; gap: 4px; font-size: 14px; }
 }
 
 // Téléphone
@@ -147,6 +151,9 @@ h1, h2, h3 { color: $kb-navy; }
   .kb-visual { height: 96px; }
   .kb-h2 { font-size: 24px; }
   .kb-featured { padding: 24px 14px; border-radius: 16px; }
+  .kb-featured-grid { grid-template-columns: minmax(0, 1fr); }
+  .kb-quote { flex: 0 0 auto; }
+  .kb-feature-foot { flex-direction: row; }
   .kb-portrait { float: none; margin: 0 auto 24px; }
   .kb-nav { gap: 14px; font-size: 15px; }
 }
