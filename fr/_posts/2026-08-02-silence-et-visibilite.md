@@ -1,5 +1,6 @@
 ---
 title: "Le silence est d’or"
+ref: de-silence
 line: digital-exhaustion
 ---
 
