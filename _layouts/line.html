@@ -8,6 +8,11 @@ layout: page
 {%- assign items = site.posts | where: "line", page.line | reverse -%}
 <ul class="post-list">
 {%- for post in items %}
+  {%- comment -%} Un texte dans l'autre langue est masqué s'il existe aussi dans la langue de la page {%- endcomment -%}
+  {%- if post.lang != page.lang and post.ref -%}
+    {%- assign twin = items | where: "ref", post.ref | where: "lang", page.lang | first -%}
+    {%- if twin -%}{%- continue -%}{%- endif -%}
+  {%- endif %}
   <li><span class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</span>
   <h3><a class="post-link" href="{{ post.url | relative_url }}"{% if post.lang != page.lang %} hreflang="{{ post.lang }}" lang="{{ post.lang }}"{% endif %}>{{ post.title | escape }}</a>{% if post.format == "article" %} <span class="post-meta">· Article</span>{% endif %}</h3></li>
 {%- endfor %}
