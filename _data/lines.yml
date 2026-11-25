@@ -27,7 +27,7 @@
     description: >-
       What digital life costs us, often without our noticing: attention,
       time, critical thinking.
-    note: "Texts available in French only."
+    note: "Some texts available in French only."
     link: "Read the texts →"
   fr:
     name: "Épuisement numérique"
@@ -42,7 +42,7 @@
     name: "Reflections"
     url: /reflections/
     description: "Here, I share my own conclusions. Yours are still yours to draw."
-    note: "Texts available in French only."
+    note: "Some texts available in French only."
     link: "Read the reflections →"
   fr:
     name: "Réflexions"

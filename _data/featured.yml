@@ -1,14 +1,18 @@
 # Textes « À lire en premier » sur la page d'accueil, dans cet ordre.
 # url : adresse du texte sur le site. quote : accroche (première phrase du texte).
+# quote_en : accroche de la version anglaise, affichée sur l'accueil anglais quand le texte existe en anglais.
 
 - url: /fr/silence-et-visibilite/
   line: digital-exhaustion
   quote: "J’ai grandi avec l’idée que la parole est d’argent et le silence est d’or, que pour vivre heureux, vivons cachés."
+  quote_en: "I grew up with the idea that speech is silver, silence is golden, and that to live happily, live quietly."
 
 - url: /fr/chef-d-orchestre/
   line: reflexions
   quote: "Un chef d’orchestre a-t-il besoin d’être un virtuose de chaque instrument pour mener ses musiciens ? Je ne crois pas."
+  quote_en: "Does a conductor need to be a virtuoso on every instrument to lead the musicians? I don’t think so."
 
 - url: /fr/la-plume-et-l-intention/
   line: digital-exhaustion
   quote: "Avec l’IA, une idée de post se concrétise plus vite, parce qu’on croit qu’elle prendra moins de temps à écrire."
+  quote_en: "With AI, an idea for a post takes shape faster, because we assume it will take less time to write."
