@@ -1,5 +1,6 @@
 ---
 title: "Belle-mère et biais"
+ref: dec-belle-mere
 line: decouverte
 date: 2026-10-18 10:00:00
 ---
