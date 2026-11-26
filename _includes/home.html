@@ -1,7 +1,6 @@
 {%- assign lang = include.lang -%}
 {%- if lang == "fr" -%}
   {%- assign t_intro = "Prendre un sujet par un autre angle, et laisser en chemin quelques-unes de nos idées reçues. La conclusion vous appartient." -%}
-  {%- assign t_cta1 = "Commencer par l’IA agentique" -%}{%- assign u_cta1 = "/fr/agentic-ai/" -%}
   {%- assign t_cta2 = "À propos de ma démarche" -%}{%- assign u_cta2 = "/fr/a-propos/" -%}
   {%- assign t_lines = "Quatre lignes d’écriture" -%}
   {%- assign t_lines_sub = "Des sujets différents, une même démarche : examiner ce qui paraît évident." -%}
@@ -12,7 +11,6 @@
   {%- assign t_min = "min de lecture" -%}
 {%- else -%}
   {%- assign t_intro = "Taking a subject from another angle, and leaving a few of our assumptions behind along the way. The conclusion is yours." -%}
-  {%- assign t_cta1 = "Start with Agentic AI" -%}{%- assign u_cta1 = "/agentic-ai/" -%}
   {%- assign t_cta2 = "About my approach" -%}{%- assign u_cta2 = "/about/" -%}
   {%- assign t_lines = "Four lines of writing" -%}
   {%- assign t_lines_sub = "Different subjects, one approach: examining what seems obvious." -%}
@@ -30,8 +28,7 @@
     <h1 class="kb-tagline" lang="en">{{ site.tagline }}</h1>
     <p class="kb-intro">{{ t_intro }}</p>
     <div class="kb-ctas">
-      <a class="kb-btn kb-btn-primary" href="{{ u_cta1 | relative_url }}">{{ t_cta1 }}</a>
-      <a class="kb-btn kb-btn-ghost" href="{{ u_cta2 | relative_url }}">{{ t_cta2 }}</a>
+      <a class="kb-btn kb-btn-primary" href="{{ u_cta2 | relative_url }}">{{ t_cta2 }}</a>
     </div>
   </div>
 </section>
