@@ -153,16 +153,26 @@ h1, h2, h3 { color: $kb-navy; }
   .post-title, .post-header h1 { font-size: 28px; }
   .post-content h2 { font-size: 21px; }
   .post-link, .post-list h3 { font-size: 17px; }
-  .kb-tagline { font-size: 34px; }
-  .kb-hero-inner { padding-top: 32px; padding-bottom: 36px; }
+  .kb-header-inner { padding-top: 12px; padding-bottom: 12px; gap: 6px; }
+  .kb-header .kb-site-title, .kb-header .kb-site-title:visited { font-size: 19px; }
+  .kb-tagline { font-size: 28px; line-height: 1.12; }
+  .kb-intro { font-size: 15.5px; line-height: 1.5; margin-top: 12px; }
+  .kb-ctas { margin-top: 20px; }
+  .kb-btn { font-size: 14px; padding: 9px 18px; }
+  .kb-hero-inner { padding-top: 24px; padding-bottom: 28px; }
+  .kb-home { padding-top: 32px; }
+  .kb-sub { font-size: 15.5px; margin-bottom: 18px; }
+  .kb-card-body h3 { font-size: 20px; }
+  .kb-card-body p { font-size: 15px; }
+  .kb-featured, .kb-latest { margin-top: 40px; }
   .kb-hero-art { width: 360px; height: 216px; opacity: 0.3; }
   .kb-cards { grid-template-columns: minmax(0, 1fr); }
   .kb-visual { height: 96px; }
-  .kb-h2 { font-size: 24px; }
+  .kb-h2 { font-size: 22px; }
   .kb-featured { padding: 24px 14px; border-radius: 16px; }
   .kb-featured-grid { grid-template-columns: minmax(0, 1fr); }
   .kb-quote { flex: 0 0 auto; }
   .kb-feature-foot { flex-direction: row; }
   .kb-portrait { float: none; margin: 0 auto 24px; }
-  .kb-nav { gap: 14px; font-size: 15px; }
+  .kb-nav { gap: 14px; font-size: 14px; }
 }
